@@ -12,7 +12,7 @@ public class MyClass {
 
         this.code = new char[code.length];
         this.count = count;
-        this.name = new String(name);
+        this.name = name;
         for (i = 0; i < code.length; i++) {
             this.code[i] = code[i];
         }
