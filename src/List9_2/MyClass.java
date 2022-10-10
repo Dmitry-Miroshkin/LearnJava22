@@ -20,14 +20,14 @@ public class MyClass {
     }
 
     public String toString() {
-        String text = "Значения полей объекта. \n ";
-        text += "поле Name: " + name + "\n";
-        text += "поле Count: " + count + "\n";
-        text += "поле code: |";
+        StringBuilder text = new StringBuilder("Значения полей объекта. \n ");
+        text.append("поле Name: ").append(name).append("\n");
+        text.append("поле Count: ").append(count).append("\n");
+        text.append("поле code: |");
         for (char c : code) {
-            text += " " + c + " |";
+            text.append(" ").append(c).append(" |");
         }
-        return text;
+        return text.toString();
 
     }
 }
