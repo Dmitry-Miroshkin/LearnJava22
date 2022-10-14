@@ -13,7 +13,7 @@ public class MainThreadDemo {
         int p = t.getPriority();
         t.setPriority(++p);
         System.out.println(t);
-        System.out.println("Выполнение потока приостановлено на " + time/1000 + " секунд");
+        System.out.println("Выполнение потока приостановлено на " + (double) time/1000 + " секунд");
         Thread.sleep(time);
         System.out.println("Program is done!");
     }
