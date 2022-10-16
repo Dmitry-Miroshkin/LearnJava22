@@ -8,18 +8,21 @@ import java.io.IOException;
 
 public class FileInputOutputDemo {
     public static void main(String[] args) throws IOException {
-        String filePath = "./";
+        String filePath = "/home/user/IdeaProjects/untitled/res/";
         filePath += JOptionPane.showInputDialog("Укажите имя файла");
         try {
 
 
             FileInputStream fin = new FileInputStream(filePath);
-            FileOutputStream fout = new FileOutputStream("./result.txt");
+            FileOutputStream fout = new FileOutputStream("res/result.txt");
             int s = fin.read();
             while (s != -1) {
                 switch (s) {
                     case 'T':
                         s = 't';
+                        break;
+                    case 'а':
+                        s = '@';
                         break;
                     case '.':
                         fout.write('<');
