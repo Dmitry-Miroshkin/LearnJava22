@@ -28,7 +28,7 @@ public class MessageFrame implements ActionListener {
         frame.add(i1);
         frame.add(message);
         button = new JButton("Прочитано!");
-        button.setBounds(width/4,3*heigh/5,width/2,heigh/6);
+        button.setBounds(width/4,3*heigh/6,width/2,heigh/8);
         button.setFocusPainted(false);
         button.addActionListener(this);
         frame.add(button);

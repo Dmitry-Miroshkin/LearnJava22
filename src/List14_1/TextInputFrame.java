@@ -6,11 +6,10 @@ import java.awt.event.ActionListener;
 
 public class TextInputFrame implements ActionListener {
 
-    private JFrame frame;
+    private final JFrame frame;
     JLabel enter;
     JTextField tf;
     JButton btYes, btNo;
-    private String name;
 
     public TextInputFrame(String msg) {
         int width = 300, height = 150;
@@ -46,12 +45,12 @@ public class TextInputFrame implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
           String btName =ae.getActionCommand();
           if (btName.equalsIgnoreCase(btYes.getText())){
-          name=tf.getText();
+              String name = tf.getText();
           frame.setVisible(false);
           IntInputFrame.show("Сколько Вам лет? Укажите возраст (лет):", name);}
           else  System.exit(0);
     }
-    static void show(String text){
-        new TextInputFrame(text);
+    static void show(){
+        new TextInputFrame("Как Вас зовут? Введите имя:");
     }
 }

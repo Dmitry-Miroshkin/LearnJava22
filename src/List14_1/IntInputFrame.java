@@ -8,12 +8,11 @@ import java.awt.event.KeyListener;
 
 public class IntInputFrame implements KeyListener, ActionListener {
 
-    private JFrame frame;
+    private final JFrame frame;
 
-    private JLabel enter;
-    private JButton btYes, btNo;
-    private JTextField tf;
-    private String name;
+    private final JButton btYes;
+    private final JTextField tf;
+    private final String name;
     private int age;
 
     public IntInputFrame(String msg, String name) {
@@ -22,7 +21,7 @@ public class IntInputFrame implements KeyListener, ActionListener {
         frame = new JFrame(" Окно для ввода числа (возраста)...");
         frame.setBounds(400, 300, width, height);
         frame.setLayout(null);
-        enter = new JLabel(msg, JLabel.LEFT);
+        JLabel enter = new JLabel(msg, JLabel.LEFT);
         enter.setBounds(10, 10, width - 20, height / 6);
         tf = new JTextField(frame.getWidth() - 20);
         tf.setBounds(10, enter.getHeight() + 5, enter.getWidth(), height / 6);
@@ -31,7 +30,7 @@ public class IntInputFrame implements KeyListener, ActionListener {
         btYes.setBounds(10, height / 2 + 10, (width - 30) / 2, height / 6);
         btYes.setEnabled(false);
         btYes.setFocusPainted(false);
-        btNo = new JButton("Завершить");
+        JButton btNo = new JButton("Завершить");
         btNo.setBounds((width - 30) / 2 + 18, height / 2 + 10, (width - 30) / 2, height / 6);
         btNo.setFocusPainted(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
